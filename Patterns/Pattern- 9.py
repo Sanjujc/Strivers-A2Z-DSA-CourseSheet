@@ -12,20 +12,24 @@ Things to consider while printing the pattern:
 
  2. How many columns?
     - The number of columns varies:
-        - The number of dashes decreases as the row number increases.
-        - The number of stars (`*`) in each row is `2 * i - 1`, where `i` is the current row number.
+        - The number of dashes increases as the row number increases.
+        - The number of stars (`*`) in each row is calculated using your formula, which is `(n + (n - i) - i) + 1`, where `i` is the current row number.
 
  3. What to print?
     - For each row, print the required number of `'-'` (dashes) followed by the required number of `'*'` (stars).
-    - Dashes: `n - i` dashes.
-    - Stars: `2 * i - 1` stars.
+    - Dashes: `i` dashes.
+    - Stars: `((n + (n - i) - i) + 1)` stars.
 """
 
 n = 5
-for i in  range(1,n+1):
-
+for i in range(1, n + 1):
+    # Print the dashes
     for space in range(i):
         print('-', end=' ')
-    for col in range((n+(n-i)-i)+1):
-        print('*',end=' ')
+
+    # Print the stars using your formula
+    for col in range((n + (n - i) - i) + 1):
+        print('*', end=' ')
+
+    # Move to the next line after each row
     print()
