@@ -1,10 +1,14 @@
 """
 Pattern:
-- * * * * * * * * *
-- - * * * * * * *
-- - - * * * * *
-- - - - * * *
-- - - - - *
+- - - - *
+- - - * * *
+- - * * * * *
+- * * * * * * *
+* * * * * * * * *
+- * * * * * * *
+- - * * * * *
+- - - * * *
+- - - - *
 
 Things to consider while printing the pattern:
  1. How many rows?
@@ -21,7 +25,7 @@ Things to consider while printing the pattern:
     - Stars: `((n + (n - i) - i) + 1)` stars.
 """
 
-n = 50
+n = 5
 for i in range(1, n+1):
     # Print the dashes
     for space in range(n-i):
