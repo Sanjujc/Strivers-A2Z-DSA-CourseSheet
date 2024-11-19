@@ -1,8 +1,4 @@
 def armStrong( x):
-    """
-    :type x: int
-    :rtype: int
-    """
     temp = x
     rev = 0
     while x >0:
