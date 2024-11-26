@@ -9,3 +9,4 @@ for i in range(1,n):
         j -=1
     a[j+1] = key
 print(a)
+
